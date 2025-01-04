@@ -1,4 +1,4 @@
 const getbaseUrl =() =>{
-    return "http://localhost:5000"
+    return "https://food-co-backend.vercel.app/"
 }
 export default getbaseUrl;
