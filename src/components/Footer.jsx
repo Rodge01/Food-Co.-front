@@ -46,7 +46,7 @@ const Footer = () => {
 
         {/* Right Side - Social Icons */}
         <div className="flex gap-6">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
+          <a href="https://www.facebook.com/PotetoCo2018" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
             <FaFacebook size={24} />
           </a>
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary">

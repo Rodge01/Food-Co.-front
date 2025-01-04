@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import f1 from '../../assets/1.png'
-import f2 from '../../assets/2.png'
-import f3 from '../../assets/3.png'
-import f4 from '../../assets/4.png'
-import f5 from '../../assets/5.png'
+import f1 from '../../assets/Fnoc.jpg'
+import f2 from '../../assets/chingchong.jpg'
+import f3 from '../../assets/ear.jpg'
+import f4 from '../../assets/pes.webp'
+import f5 from '../../assets/haha.jpg'
  import { Swiper, SwiperSlide } from 'swiper/react';
 
  // Import Swiper styles
@@ -17,32 +17,32 @@ import f5 from '../../assets/5.png'
 const news = [
     {
         "id": 1,
-        "title": "Global Climate Summit Calls for Urgent Action",
-        "description": "World leaders gather at the Global Climate Summit to discuss urgent strategies to combat climate change, focusing on reducing carbon emissions and fostering renewable energy solutions.",
+        "title": "𝐓𝐞𝐚𝐦 𝐏𝐇 𝐁𝐮𝐫𝐧𝐬 𝐁𝐫𝐢𝐠𝐡𝐭 𝐚𝐭 𝐭𝐡𝐞 𝐌𝟔 𝐖𝐨𝐫𝐥𝐝 𝐂𝐡𝐚𝐦𝐩𝐢𝐨𝐧𝐬𝐡𝐢𝐩𝐬",
+        "description": "Hailed as the new M6 World Champions, Fnatic ONIC Philippines (FNOP) triumphed over Team Liquid Indonesia (TLID) with a leading score of 4-1. The M6 World Tournament took place at the Axiata Arena in Bukit Jalil, Kuala Lumpur, Malaysia, on December 15, 2024.",
         "image": f1
     },
     {
         "id": 2,
-        "title": "Breakthrough in AI Technology Announced",
-        "description": "A major breakthrough in artificial intelligence has been announced by researchers, with new advancements promising to revolutionize industries from healthcare to finance.",
+        "title": "China 'monster ship' spotted near Luzon",
+        "description": "The Philippine Coast Guard (PCG) on Saturday evening confirmed the presence of the so-called ''monster ship'' of the China Coast Guard near Luzon.",
         "image": f2
     },
     {
         "id": 3,
-        "title": "New Space Mission Aims to Explore Distant Galaxies",
-        "description": "NASA has unveiled plans for a new space mission that will aim to explore distant galaxies, with hopes of uncovering insights into the origins of the universe.",
+        "title": "a little genius has found a way that allow everyone to legally access all the channels from our TVs (regardless of the TV model and year).",
+        "description": "Once plugged in, the box will act as a satellite and allow the TV to access all the channels and streaming applications (including the most prestigious ones) Their real stroke of genius in making all this possible was the idea of buying thousands of accesses to channels and applications and then redistributing them to the boxes thanks to artificial intelligence. The AI they have developed allows all the TVs connected to the box to choose and watch any programme without waiting or interruption",
         "image": f3
     },
     {
         "id": 4,
-        "title": "Stock Markets Reach Record Highs Amid Economic Recovery",
-        "description": "Global stock markets have reached record highs as signs of economic recovery continue to emerge following the challenges posed by the global pandemic.",
+        "title": "Peso drops back to P58:$1; PSEi gains",
+        "description": "THE peso ended the first trading week of 2025 down against the dollar, but the stock market advanced with investors said to have welcomed the latest manufacturing data. The currency weakened by 29 centavos to P58.2:$1 while the Philippine Stock Exchange index (PSEi) added 53.42 points, or 0.82 percent, to close Friday at 6,603.81.",
         "image": f4
     },
     {
         "id": 5,
-        "title": "Innovative New Smartphone Released by Leading Tech Company",
-        "description": "A leading tech company has released its latest smartphone model, featuring cutting-edge technology, improved battery life, and a sleek new design.",
+        "title": "Soldier who blew up Tesla at Trump hotel left note saying blast was to be a 'wake up call' for US",
+        "description": "LAS VEGAS — A highly decorated Army soldier who fatally shot himself in a Tesla Cybertruck just before it blew up outside the Trump hotel in Las Vegas left notes saying the New Year's Day explosion was a stunt to serve as a wake up call for the country's ills, investigators said Friday.",
         "image": f5
     }
 ]

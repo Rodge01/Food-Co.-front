@@ -7,10 +7,9 @@ const Banner = () => {
   </div>
   
   <div className="md:w-1/2 w-full">
-    <h1 className="md:text-5xl text-2xl font-medium mb-7">Top Best Mobile Game</h1>
+    <h1 className="md:text-5xl text-2xl font-medium mb-7">Best Sell of the Month</h1>
     <p className="mb-10">
-      It is miHoYo&apos;s first turn-based game, featuring the main character, who is referred to as the Trailblazer, travelling across planets through the Astral Express.
-    </p>
+    <b>F1</b> Our Potato Fries are a crowd favorite! Made from hand-cut, farm-fresh potatoes, they’re golden and crispy on the outside, soft on the inside, and perfectly seasoned. Whether as a side or a snack, their irresistible texture and flavor keep customers coming back for more!</p>
   </div>
 </div>
 
