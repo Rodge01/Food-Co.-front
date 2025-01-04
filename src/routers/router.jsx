@@ -6,7 +6,7 @@ import Register from "../components/Register.jsx";
 import CartPage from "../pages/food/CartPage.jsx";
 import Checkout from "../pages/food/Checkout.jsx";
 import SingleFood from "../pages/food/SingleFood.jsx"
-import PrivateRoute from "./Privateroute.jsx";
+import PrivateRoute from "./PrivateRoute.jsx"
 import OrderPage from "../pages/food/OrderPage.jsx";
 import AdminRoute from "./AdminRoute.jsx";
 import AdminLogin from "../components/AdminLogin.jsx";
