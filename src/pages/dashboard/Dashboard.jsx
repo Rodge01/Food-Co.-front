@@ -78,7 +78,7 @@ const Dashboard = () => {
       </svg>
     </div>
     <div>
-      <span className="inline-block text-2xl font-bold">{data?.trendingBooks}</span>
+      <span className="inline-block text-2xl font-bold">{data?.trendingFoods}</span>
       <span className="inline-block text-xl text-gray-500 font-semibold">(13%)</span>
       <span className="block text-gray-500">Trending Foods This Month</span>
     </div>

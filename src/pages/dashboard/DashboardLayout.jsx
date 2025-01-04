@@ -45,7 +45,7 @@ const DashboardLayout = () => {
               <MdOutlineManageHistory className="h-6 w-6" />
             </NavLink>
             <NavLink 
-              to="/dashboard/add-new-food" 
+              to="/dashboard/Orders" 
               className="inline-flex items-center justify-center py-3 hover:text-gray-400 hover:bg-gray-700 focus:text-gray-400 focus:bg-gray-700 rounded-lg"
               activeclassName="text-purple-600 bg-white" // Apply active styles here
             >

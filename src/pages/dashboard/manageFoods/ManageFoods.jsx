@@ -73,7 +73,7 @@ const ManageFoods = () => {
                         {food.category}
                       </td>
                       <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                        ${food.newPrice}
+                      ₱{food.newPrice}
                       </td>
                       <td className="border-t-0 px-6 align-middle border-1-0 border-r-0 text-s whitespace-nowrap p-4">
                         {/* Red/Green light indicator based on status */}

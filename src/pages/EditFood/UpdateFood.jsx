@@ -64,20 +64,20 @@ const UpdateFood = () => {
     if(isError) return <div>Error Fetching Food Data</div>
   return (
     <div className="max-w-lg mx-auto md:p-6 p-3 bg-white rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold text-gray-800 mb-4">Update Book</h2>
+      <h2 className="text-2xl font-bold text-gray-800 mb-4">Update Food</h2>
 
       <form onSubmit={handleSubmit(onSubmit)}>
         <InputField
           label="Title"
           name="title"
-          placeholder="Enter book title"
+          placeholder="Enter  title"
           register={register}
         />
 
         <InputField
           label="Description"
           name="description"
-          placeholder="Enter book description"
+          placeholder="Enter  description"
           type="textarea"
           register={register}
         />
