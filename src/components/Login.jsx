@@ -58,7 +58,7 @@ const Login = () => {
                 px-8 rounded focus:outline-none">Login</button>
             </div>
         </form>
-        <p className="align-baseline font-medium mt-4 mb-2 text-sm">Haven&apos;t an acoount? Please <Link to='/register' className='text-blue-500 hover:text-blue-700'>Register</Link></p>
+        <p className="align-baseline font-medium mt-4 mb-2 text-sm">Haven&apos;t an account? Please <Link to='/register' className='text-blue-500 hover:text-blue-700'>Register</Link></p>
       <div className="mt-4">
         <button onClick={handleGoogleSignin}
         className="w-full flex flex-warp gap-1 items-center justify-center bg-secondary 
