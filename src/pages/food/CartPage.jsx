@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getImgUrl } from "../../utils/getImgUrl";
-import { removeFromCart, clearCart } from '../../redux/features/cart/cartSlice';
+import { removeFromCart, clearCart, updateQuantity } from '../../redux/features/cart/cartSlice';
 
 const CartPage = () => {
     const cartItems = useSelector((state) => state.cart.cartItems);
@@ -31,6 +31,16 @@ const CartPage = () => {
 
     const handleRemoveFromCart = (food) => {
         dispatch(removeFromCart(food));
+    };
+
+    const handleIncreaseQuantity = (food) => {
+        dispatch(updateQuantity({ id: food._id, quantity: food.quantity + 1 }));
+    };
+
+    const handleDecreaseQuantity = (food) => {
+        if (food.quantity > 1) {
+            dispatch(updateQuantity({ id: food._id, quantity: food.quantity - 1 }));
+        }
     };
 
     // Check if the cart is empty or the total price is zero
@@ -76,15 +86,30 @@ const CartPage = () => {
                                                 </h3>
                                                 <p className="ml-4">₱{food.newPrice}</p>
                                             </div>
-                                            <p className="mt-1 text-sm text-gray-500">
-                                                <strong>Category:</strong> {food.category}
+                                            <p className="mt-1">
+                                                <b>Category:</b> {food.category}
                                             </p>
                                         </div>
                                         <div className="flex items-center justify-between mt-2">
-                                            <div className="flex items-center">
+                                            <div className="flex items-center space-x-3">
+                                            <strong>Quantity:</strong> 
+                                                {/* Decrease Quantity Button */}
+                                                <button
+                                                    onClick={() => handleDecreaseQuantity(food)}
+                                                    className="w-7 h-6.5 flex items-center justify-center bg-gray-500 text-white rounded-full hover:bg-gray-600 transition-all duration-200"
+                                                >
+                                                -
+                                                </button>
                                                 <p className="text-gray-500">
-                                                    <strong>Qty:</strong> {food.quantity}
+                                                {food.quantity}
                                                 </p>
+                                                {/* Increase Quantity Button */}
+                                                <button
+                                                    onClick={() => handleIncreaseQuantity(food)}
+                                                    className="w-7 h-6.5 flex items-center justify-center  bg-gray-500 text-white rounded-full  hover:bg-gray-600 transition-all duration-200"
+                                                >
+                                                    +
+                                                </button>
                                             </div>
                                             <button
                                                 onClick={() => handleRemoveFromCart(food)}
@@ -150,5 +175,4 @@ const CartPage = () => {
         </div>
     );
 };
-
 export default CartPage;
