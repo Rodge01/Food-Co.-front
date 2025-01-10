@@ -46,9 +46,41 @@ const cartSlice = createSlice({
       if (existingItem) {
         if (existingItem.quantity > 1) {
           existingItem.quantity -= 1;  // Decrease quantity
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: `Decreased ${existingItem.title} quantity to ${existingItem.quantity}`,
+            showConfirmButton: false,
+            timer: 1500,
+          });
         } else {
           state.cartItems = state.cartItems.filter(item => item._id !== action.payload._id);  // Remove item if quantity is 1
+          Swal.fire({
+            position: 'center',
+            icon: 'warning',
+            title: `${existingItem.title} has been removed from your cart.`,
+            showConfirmButton: false,
+            timer: 1500,
+          });
         }
+      }
+    },
+
+    updateQuantity: (state, action) => {
+      const { id, quantity } = action.payload;
+      const existingItem = state.cartItems.find(item => item._id === id);
+
+      if (existingItem && quantity > 0) {
+        existingItem.quantity = quantity;
+
+        // Notify the user with SweetAlert2
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: `${existingItem.title} quantity updated to ${existingItem.quantity}`,
+          showConfirmButton: false,
+          timer: 1500,
+        });
       }
     },
 
@@ -58,5 +90,5 @@ const cartSlice = createSlice({
   },
 });
 
-export const { addtoCart, removeFromCart, clearCart } = cartSlice.actions;
+export const { addtoCart, removeFromCart, updateQuantity, clearCart } = cartSlice.actions;
 export default cartSlice.reducer;
