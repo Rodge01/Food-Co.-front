@@ -1,5 +1,6 @@
 import { useGetOrderByEmailQuery, useDeleteOrdersByEmailMutation } from '../../redux/features/orders/orderApis'; // Import the delete mutation
 import { useAuth } from '../../context/AuthContext';
+import jsPDF from 'jspdf'; // Install jsPDF: npm install jspdf
 
 const OrderPage = () => {
   const { currentUser } = useAuth();
@@ -21,6 +22,35 @@ const OrderPage = () => {
     } catch (error) {
       alert('Failed to delete orders.', error);
     }
+  };
+
+  // Handle generating receipt for a specific order
+  const handleGenerateReceipt = (order) => {
+    const doc = new jsPDF();
+    const date = new Date(order.createdAt).toLocaleString();
+
+    // Receipt Header
+    doc.setFontSize(18);
+    doc.text('Order Receipt', 20, 20);
+
+    // Order Details
+    doc.setFontSize(12);
+    doc.text(`Order ID: ${order._id}`, 20, 40);
+    doc.text(`Name: ${order.name}`, 20, 50);
+    doc.text(`Email: ${order.email}`, 20, 60);
+    doc.text(`Phone: ${order.phone}`, 20, 70);
+    doc.text(`Total Price: ₱${order.totalPrice}`, 20, 80);
+    doc.text(`Address: ${order.address.city}`, 20, 90);
+    doc.text(`Order Date: ${date}`, 20, 100);
+
+    // Food IDs
+    doc.text('Food Items:', 20, 110);
+    order.foodIds.forEach((foodId, index) => {
+      doc.text(`${index + 1}. ${foodId}`, 30, 120 + index * 10);
+    });
+
+    // Save the PDF
+    doc.save(`Receipt-${order._id}.pdf`);
   };
 
   return (
@@ -72,6 +102,14 @@ const OrderPage = () => {
                 <h4 className="font-semibold text-sm text-gray-700">Order Date:</h4>
                 <p className="text-gray-600">{new Date(order.createdAt).toLocaleString()}</p>
               </div>
+
+              {/* Generate Receipt Button */}
+              <button
+                onClick={() => handleGenerateReceipt(order)}
+                className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+              >
+                Generate Receipt
+              </button>
             </div>
           ))}
         </div>
@@ -79,5 +117,4 @@ const OrderPage = () => {
     </div>
   );
 };
-
 export default OrderPage;
